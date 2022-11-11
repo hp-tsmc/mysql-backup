@@ -1,8 +1,10 @@
 FROM ubuntu:20.04
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt update
 
-RUN DEBIAN_FRONTEND=noninteractive apt install -y mariadb-client-10.3 openssl wget fuse
+RUN apt install -y mariadb-client-10.3 openssl wget fuse kmod
 
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc
 
