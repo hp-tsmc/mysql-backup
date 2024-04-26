@@ -1,10 +1,10 @@
-FROM ubuntu:20.04
+FROM debian:bullseye-20240408
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update
 
-RUN apt install -y mariadb-client-10.3 openssl wget fuse kmod cron vim-tiny curl
+RUN apt install -y mariadb-client openssl wget fuse kmod cron vim-tiny curl
 
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc
 
